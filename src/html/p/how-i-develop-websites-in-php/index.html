@@ -15,7 +15,7 @@
 
 			<div class="container--post">
 				<h1>Как я разрабатываю сайты на PHP</h1>
-				<p class="post--start-p">Небольшой гайд.</p>
+				<p class="post--start-p">A small guide.</p>
 			</div>
 
 			<figure class="post--start-img text-center">
@@ -29,186 +29,186 @@
 
 			<div class="container--post">
 				<p>
-					За 3 года активной разработки проектов в web-среде для личного
-					пользования и людям на заказ я вывел некоторую форму удобной
-					сортировки проекта. Решил рассказать об этом людям, так как скоро буду
-					менять стиль разработки.
+					For 3 years of active project development in a web environment for personal
+					for use and for people to order, I have brought out some form of convenient
+					sorting the project. I decided to tell people about it, as I will be soon
+					change the development style.
 				</p>
-				<h3>Структурирование проекта</h3>
+				<h3>Structuring the project</h3>
 				<p>
-					Прежде Allго стоит разобраться со структурой проекта. Какое-то время я
-					использовал длинные названия, понятные, но из-за них URL может
-					удлиниться. Теперь мне больше по душе непонятные папки в духе «a»,
-					«f», «db» и прочее.
-				</p>
-				<p>
-					В корне я храню .htaccess, в котором описал ссылку на страницу 404,
-					403 и правила, которые убирают расширение .php из URL.
+					First of all, it is necessary to understand the structure of the project. For a while I
+					I used long names, understandable, but because of them the URL can
+					lengthen. Now I prefer incomprehensible folders in the spirit of "a",
+					"f", "db" and so on.
 				</p>
 				<p>
-					Также в корне храню папку «i» - тут All дополнительное для сайта:
-					шрифты, стили, скрипты и изображения. В папке «i» расположены 4 папки:
-					«a», «css», «img», «php».
+					At the root I keep .htaccess, which described the link to page 404,
+					403 and the rules that remove the extension.php from the URL.
 				</p>
 				<p>
-					Начнем с конца. Папка «php» имеет внутри себя 2 папки: «c» и «m».
-					Папка «c» сокращение от слова component - тут хранятся части сайта:
-					footer, header, head и прочие описанные заранее стили. Я выношу блоки
-					в модули, как это происходит в ReactJS из-за удобства использования.
+					I also keep the "i" folder in the root - here is All additional for the site:
+					fonts, styles, scripts and images. There are 4 folders in the "i" folder:
+					"a", "css", "img", "php".
 				</p>
 				<p>
-					Папка «m» сокращение от слова module - тут хранятся обработчики
-					событий. Например, тут я храню скрипт rb-mysql.php, позволяющий удобно
-					обращаться к базе данных и обработчики, к которым ссылаюсь в формах
-					или ссылках.
+					Let's start from the end. The "php" folder has 2 folders inside it: "c" and "m".
+					Folder "c" is an abbreviation of the word component - parts of the site are stored here:
+					footer, header, head and other styles described in advance. I'm taking out the blocks
+					in modules, as it happens in ReactJS due to usability.
 				</p>
 				<p>
-					Папка «img» хранит картинки. Тут All просто, папка «logo» для
-					логотипов и другие нужные папки, разбитые по категориям сайта.
+					Folder "m" is an abbreviation of the word module - handlers are stored here
+					events. For example, here I store the script rb-mysql.php , allowing convenient
+					access the database and the handlers that I refer to in the forms
+					or links.
 				</p>
 				<p>
-					Папка «css» хранит CSS стили моего сайта. В корне я храню файл
-					app.css, в котором подключаю другие CSS-файлы с помощью @import. Такой
-					вариант позволяет мне полноценно работать в 1 папке, созданной для CSS
-					стилей и не менять структуру проекта в других его частях, тем самым
-					усложняя.
+					The "img" folder stores images. Everything is simple here, the "logo" folder for
+					logos and other necessary folders, divided by site categories.
 				</p>
 				<p>
-					Удобно хранения стилей в одной папке обосновывается также и
-					использованием такого варианта для смены темы. Вместе с файлом app.css
-					в корне папки «css» располагаются 2 файла: light.css, dark.css. В двух
-					данных файлах описаны цвета, которые я использую в проекте. В
-					зависимости от текущей темы я подключаю нужный файл, который, в случае
-					чего, сменит цвета на сайте. Таким образом происходит смена темы на
-					сайте.
+					The "css" folder stores the CSS styles of my site. At the root I store a file
+					app.css, in which I connect other CSS files using @import. Such
+					the option allows me to fully work in 1 folder created for CSS
+					styles and do not change the structure of the project in its other parts, thereby
+					complicating things.
 				</p>
 				<p>
-					И самое интересное - папка «a» - сокращение от слова another. Чаще
-					Allго здесь я храню весь «мусор», без которого нельзя обойтись. Я
-					редко меняю файлы и папки, хранящиеся в папке «a». Именно поэтому я
-					вынес данные файлы и папки в папку «a». К примеру, в папке «a» я храню
-					стили Bootstrap, шрифты, JavaScript-код и сохранения с базы данных. В
-					случае чего можно расширить количество хранимых здесь файлов и
-					интегрировать иные решения, нужные для проекта.
-				</p>
-				<h3>Вспомогательные файлы, нужные для качественного сайта</h3>
-				<p>
-					Но просто папками и файлами PHP обойтись не получится. Да, можно
-					создать отличный, оптимизированных с хорошей доступностью сайт. Но
-					помимо наличия файлов страниц, нужны также вспомогательные файлы,
-					описывающие сайт. Данные файлы обычный человек читать не будет, ему
-					они не интересы. Данные файлы нужны для роботов-поисковиков, которые
-					будут проверять Ваш сайт и проходиться по нему.
+					The convenience of storing styles in one folder is also justified by
+					using this option to change the topic. Together with the app.css file
+					there are 2 files in the root of the "css" folder: light.css, dark.css. In two
+					these files describe the colors that I use in the project. In
+					depending on the current topic, I connect the necessary file, which, in the case of
+					what, will change the colors on the site. Thus, there is a change of theme on
+					the site.
 				</p>
 				<p>
-					Первый разобранный выше файл - это .htaccess. Нужен для того, чтобы, к
-					примеру, изменить формат отображения URL-адреса. Также .htaccess
-					позволяет совершать и другие действия, с которыми можно ознакомиться в
-					интернете.
+					And the most interesting thing is the folder "a" - an abbreviation of the word another. More often
+					Allgo here I store all the "garbage", without which it is impossible to do. I
+					rarely change files and folders stored in folder "a". That's why I
+					moved these files and folders to folder "a". For example, in folder "a" I store
+					Bootstrap styles, fonts, JavaScript code, and database saves. In
+					in which case, you can expand the number of files stored here and
+					integrate other solutions needed for the project.
+				</p>
+				<h3>Auxiliary files needed for a high-quality website</h3>
+				<p>
+					But just folders and PHP files will not work. Yes, you can
+					create an excellent, optimized with good accessibility website. But
+					in addition to having page files, auxiliary files are also needed,
+					describing the site. An ordinary person will not read these files, he
+					they are not interests. These files are needed for search engine robots that
+					they will check your site and go through it.
 				</p>
 				<p>
-					Файл sitemap.xml содержит в себе «код» в XML-формате. Данный файл
-					хранит в себе All страницы сайта, их приоритет, время последнего
-					изменения страницы и частоту изменения определенной страницы. К
-					примеру, ознакомиться с данным файлом можно по адресу
+					The first file parsed above is .htaccess. It is needed in order, for
+					example, to change the format of the URL display. Also.htaccess
+					allows you to perform other actions, which can be found in
+					the internet.
+				</p>
+				<p>
+					File sitemap.xml contains the "code" in XML format. This file
+					stores All the pages of the site, their priority, the time of the last
+					page changes and the frequency of changes to a specific page. To
+					for example, you can view this file at
 					creagoo.ru/sitemap.xml.
 				</p>
 				<p>
-					Также имеется файл robots.txt. В нем хранится информация для
-					роботов-поисковиков. Ссылка на sitemap и на различную информацию для
-					роботов, к примеру какие пути доступны для обхода, а какие нет.
+					There is also a file robots.txt . It stores information for
+					search engine robots. Link to the sitemap and various information for
+					robots, for example, which paths are available for traversal and which are not.
 				</p>
 				<p>
-					Также следует хранить файл icon.ico. Данный файл в строке адреса
-					позволит вывести маленькое изображение-логотип сайта. Чаще Allго
-					данный файл нужен для уникальности страницы в выдаче.
+					You should also store the icon.ico file. This file in the address bar
+					it will allow you to display a small image-the site logo. Most often Allgo
+					this file is needed for the uniqueness of the page in the output.
 				</p>
 				<p>
-					Не соAllм файл, но All же, для добавления дополнительной уникальности
-					страницы можно использовать акцентный цвет. Добавляется стиль в head с
-					названием «theme-color» и в content значение цвета в HTML-формате.
-					Насколько мне известно, браузер Safari считывает данную информацию и
-					отображает в заголовке.
+					We will not delete the file, but All the same, to add additional uniqueness
+					the pages can use an accent color. A style is added to the head with
+					the name "theme-color" and in content the color value in HTML format.
+					As far as I know, Safari browser reads this information and
+					displays in the header.
 				</p>
 				<p>
-					Например, для медиа сайта можно использовать файл RSS. В него
-					записывается информация о страницах. Если Вы посмотрите медиа сайты, в
-					footer’е Вы увидите ссылку на RSS-канал. Это файл, хранящий какие-то
-					записи. Часто данный RSS-файл можно подключить для какой-нибудь соц.
-					сети, чтобы она отображала Ваши последние страницы.
+					For example, you can use an RSS file for a media site. Into it
+					information about the pages is recorded. If you look at media sites,
+					you will see a link to the RSS feed in footer. This is a file that stores some
+					records. Often this RSS file can be connected for some social network.
+					the network so that it displays your latest pages.
 				</p>
-				<h3>«Чистый» PHP или Laravel</h3>
+				<h3>"Pure" PHP or Laravel</h3>
 				<p>
-					Мы разобрали структуру сайта, посмотрели, каким образом следует
-					хранить файлы проекта. Теперь разберемся, какой вариант следует
-					использовать - просто PHP или фреймворк Laravel?
-				</p>
-				<p>
-					Сообщу, что транслируемое мнение - это сугубо мой личный опыт. Если
-					Ваш опыт отличается - это отлично.
+					We have disassembled the structure of the site, looked at how it should be
+					store project files. Now let's figure out which option should
+					should I just use PHP or the Laravel framework?
 				</p>
 				<p>
-					Создание своего первого сайта я начинал именно с чистого PHP. Понятие
-					«чистый PHP» означает, что используется язык программирования PHP и
-					ничего более. Разработка происходит немного трудновато, потому что
-					отслеживаются зависимости самостоятельно. Нет возможности
-					интегрировать какие-то решения в свой проект.
+					I will inform you that the broadcast opinion is purely my personal experience. If
+					Your experience is different - that's great.
 				</p>
 				<p>
-					Laravel, вроде бы, решает данные проблемы. Позволяет писать сайты
-					круче. Но, правды ради, я не очень смог понять смысл Laravel’а для
-					использования. Да, в него интегрированы тесты, лично я ими не
-					пользуюсь, мне хватает собственного тестирования из-за малых размеров
-					сайтов.
+					I started creating my first website with pure PHP. The concept
+					"pure PHP" means that the PHP programming language is used and
+					nothing more. Development is a bit difficult because
+					dependencies are tracked independently. There is no possibility
+					integrate some solutions into your project.
 				</p>
 				<p>
-					Laravel позволяет разделить ответственность на сайте: backend и
-					frontend. Позволяет включать файлы в свой проект. Создавать
-					многоязычные сайты. Обращаться к базе данных. Решать проблемы быстрее.
+					Laravel seems to solve these problems. Allows you to write websites
+					cooler. But, for the sake of truth, I couldn't really understand the meaning of Laravel for
+					usage. Yes, tests are integrated into it, personally I don't use them
+					I use it, I have enough of my own testing because of the small size
+					sites.
 				</p>
 				<p>
-					Но мой опыт использования Laravel ассоциировался только с болью. После
-					каждого дня у меня переставал работать проект. Я начинал с более
-					поздней версии Laravel. Переустановил, но All равно были какие-то
-					проблемы и вечные ошибки, из-за которых мой проект не запускался.
+					Laravel allows you to share responsibility on the site: backend and
+					frontend. Allows you to include files in your project. Create
+					multilingual sites. Access the database. Solve problems faster.
 				</p>
 				<p>
-					Мне соAllм не нравилось вечно исправлять проблемы. Вся суть вот в чем:
-					после внедрения нового решения у меня спокойно запускался проект. Но
-					после какого-то времени вместо запуска у меня в консоли выводились
-					ошибки. Работу над проектом я произвожу на рабочей станции, после
-					проекта Laravel я ничего не менял и не удалял.
+					But my experience of using Laravel was associated only with pain. After
+					every day my project stopped working. I started with more
+					a later version of Laravel. Reinstalled, but there were still some
+					problems and eternal mistakes, because of which my project did not start.
 				</p>
 				<p>
-					Также и публикация проекта Laravel на сервер невероятно трудна:
-					требуется менять зависимости, файлы. Мне было абсолютно непонятно,
-					каким образом можно удобно загрузить проект на сервер. Отсутствие
-					гостеприимства и оттолкнуло меня от использования Laravel.
-				</p>
-				<h3>Язык программирования для обработки backend-запросов</h3>
-				<p>
-					Я решил выбрать язык программирования PHP для обработки
-					backend-запросов. Выбор сделан из-за очень простой причины: данный
-					язык программирования развивается достаточно долго, имеет внутри себя
-					хорошие технологические решения, упрощающие разработку, для данного
-					языка программирования написано не мало фреймворков, которые можно
-					использовать. Да и в целом, мне нравится данный язык программирования.
+					I didn't like fixing problems forever. The whole point is this:
+					after the introduction of the new solution, I quietly launched the project. But
+					after some time, instead of starting, my console displayed
+					mistakes. I work on the project on the workstation, after
+					I have not changed or deleted anything from the Laravel project.
 				</p>
 				<p>
-					Фактически, можно использовать любой интересующий Вас язык
-					программирования: Python, C++, Rust. Я не считаю, что это так важно.
-					Только если Вы не создаете ресурс с большими оборотами пользователей
-					или более узкой сферы использования.
+					Also, publishing the Laravel project to the server is incredibly difficult:
+					you need to change dependencies, files. It was absolutely incomprehensible to me,
+					how can I conveniently upload the project to the server. The lack of
+					hospitality and pushed me away from using Laravel.
+				</p>
+				<h3>Programming language for processing backend requests</h3>
+				<p>
+					I decided to choose the PHP programming language for processing
+					backend requests. The choice was made for a very simple reason: this
+					the programming language has been developing for a long time, it has within itself
+					good technological solutions that simplify development, for this
+					the programming language has written quite a few frameworks that can
+					use. And in general, I like this programming language.
 				</p>
 				<p>
-					В заключение я хотел бы выделить преимущества PHP: я использую его для
-					модульности моего проекта, в качестве backend-обработчика. С помощью
-					PHP можно получить возможность управлять GET-запросами и работать с
-					формами.
+					In fact, you can use any language you are interested in
+					Programming languages: Python, C++, Rust. I don't think it's that important.
+					Only if you are not creating a resource with high user turnover
+					or a narrower sphere of use.
 				</p>
 				<p>
-					Используйте то, что Вам нравится больше Allго и подходит для решения
-					задач. Удачи!
+					In conclusion, I would like to highlight the advantages of PHP: I use it for
+					modularity of my project, as a backend handler. With the help
+					PHP can be given the ability to manage GET requests and work with
+					forms.
+				</p>
+				<p>
+					Use what you like the most and is suitable for the solution
+					tasks. Good luck!
 				</p>
 			</div>
 
