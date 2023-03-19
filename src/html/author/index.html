@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../../parts/head.html', {
+		"title": "Все авторы"
+	})
+
+	<body>
+		@@include('../../parts/header.html', {
+			"activeItem": ""
+		})
+
+		<div class="container container--main">
+			<h1 class="display-5 fw-bold">Авторы</h1>
+			<div class="d-flex flex-wrap mb-3 align-items-center">
+				<p class="mb-0">
+					<a href="/en/p/" aria-label="Смотреть все статьи Спешиал" class="link"
+						>Статьи</a
+					>
+				</p>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="12"
+					height="12"
+					class="mx-2 icon"
+					viewBox="0 0 16 16"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+					/>
+				</svg>
+				<p class="mb-0">Авторы</p>
+			</div>
+		</div>
+
+		<main class="container post--font-size main--post">
+			<div class="mb-3 border-bottom pb-2">
+				<a
+					href="daniildybka"
+					class="d-flex flex-wrap align-items-center text-decoration-none"
+				>
+					<img
+						src="/img/author/daniildybka/cap.jpg"
+						width="64"
+						height="64"
+						class="img-fluid me-3 rounded-circle"
+						alt="Даниил Дыбка"
+					/>
+					<p class="card--title fs-2">Даниил Дыбка</p>
+				</a>
+			</div>
+		</main>
+
+		@@include('../../parts/footer.html', {
+})
+	</body>
+</html>

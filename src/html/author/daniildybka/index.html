@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../../../parts/head.html', {
+		"title": "Даниил Дыбка"
+	})
+
+	<body>
+		@@include('../../../parts/header.html', {
+			"activeItem": ""
+		})
+
+		<div class="container container--main">
+			<div class="d-flex flex-wrap mb-2">
+				<img
+					src="/img/author/daniildybka/cap.jpg"
+					width="64"
+					alt="Даниил Дыбка"
+					class="img-fluid me-3 rounded-circle"
+				/>
+				<h1 class="display-5 fw-bold">Даниил Дыбка</h1>
+			</div>
+			<div class="d-flex flex-wrap mb-3 align-items-center">
+				<p class="mb-0">
+					<a href="/en/p/" aria-label="Смотреть все статьи Спешиал" class="link"
+						>Статьи</a
+					>
+				</p>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="12"
+					height="12"
+					class="mx-2 icon"
+					viewBox="0 0 16 16"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+					/>
+				</svg>
+				<p class="mb-0">
+					<a
+						href="/en/author/"
+						aria-label="Смотреть все статьи Спешиал"
+						class="link"
+						>Авторы</a
+					>
+				</p>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="12"
+					height="12"
+					class="mx-2 icon"
+					viewBox="0 0 16 16"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+					/>
+				</svg>
+				<p class="mb-0">Даниил Дыбка</p>
+			</div>
+		</div>
+
+		<main class="container post--font-size main--post">
+			@@include('../../../parts/p--articles.html', {
+})
+		</main>
+
+		@@include('../../../parts/footer.html', {
+})
+	</body>
+</html>

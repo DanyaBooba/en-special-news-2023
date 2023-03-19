@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../../parts/head.html', {
+"title": "Все статьи"
+})
+
+<body>
+    @@include('../../parts/header.html', {
+    "activeItem": "posts"
+    })
+
+    <div class="container container--main mb-4">
+        <h1 class="display-5 fw-bold">Все статьи</h1>
+    </div>
+
+    <main>
+
+        @@include('../../parts/p--articles.html', {
+
+        })
+
+    </main>
+
+    @@include('../../parts/footer.html', {
+
+    })
+</body>
+
+</html>

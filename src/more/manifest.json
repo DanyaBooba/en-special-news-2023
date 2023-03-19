@@ -1,0 +1,14 @@
+{
+  "name": "Special — полезное медиа в удобном формате",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "browser",
+  "orientation": "any",
+  "background_color": "white",
+  "description": "Special — полезное медиа в удобном формате",
+  "icon": {
+    "src": "/img/logo/ico.ico",
+    "sizes": "256x256",
+    "type": "image/x-icon"
+  }
+}
